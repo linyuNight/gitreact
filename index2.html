@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html id="html">
+<head>
+	<meta charset=utf-8>
+	<meta name=description content="">
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	<title>Hello React!</title>
+	<script src="react.js"></script>
+	<script src="react.dom.js"></script>
+	<script src="https://cdn.bootcss.com/babel-standalone/6.22.1/babel.min.js"></script>
+	<style>
+		*{
+			padding:0;
+			margin:0;
+		}
+		.this{
+			color:red;
+		}
+	</style>
+</head>
+<body>
+	<script type="text/javascript" src="rem.js"></script>
+	<div id="example"></div>
+	<script type="text/javascript" src="https://cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+	<script type="text/jsx">
+		//var font = {
+		//	fontSize:'.4rem',
+		//	color:'black'
+		//}
+		//var Template = React.createClass({
+		//	render:function(){
+		//		return(
+		//			<div>
+		//				<div style={font}>{this.props.haha}</div>
+		//				<div style={font}>{this.props.fff}</div>
+		//			</div>
+		//		);
+		//	}
+		//});
+
+		//var Template1 = React.createClass({
+		//	render:function(){
+		//		return(
+		//			
+		//		);
+		//	}
+		//})
+
+		//ReactDOM.render(
+		//	<div>
+		//		<Template haha="this is react" fff="just for test"/>
+		//	</div>
+		//	,
+		//	document.getElementById('example')
+		//);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		var font = {
+			fontSize:'.4rem'
+		}
+		//var url = "http://o2o.singwa.com:8181/index.php/test/index/zzz";
+		//var Template = React.createClass({
+		//	propTypes:{
+		//		ttt:React.PropTypes.string
+		//	},
+		//	getDefaultProps:function(){
+		//		return({
+		//			zzz:'zzz',
+		//			ttt:111
+		//		})
+		//	},
+		//	getInitialState:function(){
+		//		return({
+		//			sss:true
+		//		})
+		//	},
+		//	hehe:function(){
+		//		this.setState({//这个方法会重新渲染组件
+		//			sss:!this.state.sss
+		//		})
+		//	},
+		//	componentWillMount:function(){
+		//		console.log(1)
+		//	},
+		//	render:function(){
+		//		console.log(2);
+		//		return(
+		//			<div>
+		//				<div style={font}>{this.props.ttt}</div>
+		//				<div style={font}>{this.props.iii}</div>
+		//				<div style={font}>{this.props.zzz}</div>
+		//				<div style={font} onClick={this.hehe}>//{this.state.sss?'sss':'aaa'}</div>
+		//			</div>
+		//		);
+		//	},
+		//	componentDidMount:function(){
+		//		console.log(3);
+		//	},
+		//	componentWillReceiveProps:function(){
+		//		console.log('hasreceiveprops');
+		//	},
+		//	shouldComponentUpdate:function(){
+		//		return true;
+		//	},
+		//	componentWillUpdate:function(){
+		//		console.log(5);
+		//	},
+		//	componentDidUpdate:function(){
+		//		console.log(6);
+		//	}
+		//})
+//
+		//var i = 0;
+		//var Father = React.createClass({
+		//	getInitialState:function(){
+		//		return({
+		//			gogo:'gogo'
+		//		})
+		//	},
+		//	aaa:function(){
+		//		i++;
+		//		this.setState({
+		//			gogo:'gogo' + i
+		//		})
+		//	},
+		//	render:function(){
+		//		return (
+		//			<div onClick={this.aaa}>
+		//				<Template iii={this.state.gogo}/>
+		//				<div style={font}>{this.state.id}</div>
+		//				<div style={font}>{this.state.name}</div>
+		//			</div>
+		//		)
+		//	},
+		//	componentDidMount:function(){
+		//		this.serverRequest = $.get(url, function (res) {
+		//			var ress = JSON.parse(res)
+		//            this.setState({
+		//              id: ress.id,
+		//              name: ress.name
+		//            });
+		//        }.bind(this));
+		//	},
+		//})
+		//ReactDOM.render(
+		//	<div>
+		//		<Father/>
+		//	</div>
+		//	,
+		//	document.getElementById('example')
+		//)
+
+
+
+
+
+		//var input = {
+		//	border:'1px solid #ccc',
+		//	width:'100%',
+		//	height:'.5rem'
+		//}
+		//var Child = React.createClass({
+		//	render:function(){
+		//		return (
+		//			<div>
+		//				<input style={font,input} type="text" onChange=//{this.props.aaa2}/>
+		//				<div style={font}>{this.props.hehe2}</div>
+		//			</div>
+		//		)
+		//	}
+		//})
+		//var Template = React.createClass({
+		//	getInitialState:function(){
+		//		return {
+		//			hehe:''
+		//		}
+		//	},
+		//	aaa:function(event){
+		//		this.setState({
+		//			hehe:event.target.value
+		//		})
+		//	},
+		//	render:function(){
+		//		return (
+		//			<div>
+		//				<Child  aaa2={this.aaa} hehe2={this.state.hehe}/>
+		//			</div>
+		//		)
+		//	}
+		//})
+		//ReactDOM.render(
+		//	<div>
+		//		<Template/>
+		//	</div>
+		//	,
+		//	document.getElementById('example')
+		//)
+
+
+
+
+
+
+		var Template = React.createClass({
+			getInitialState:function(){
+				return{
+					sss:"sss",
+					showstate:{
+						display:"block"
+					}
+				}
+			},
+			zzz:function(){
+				this.refs.sss.focus();
+
+
+
+				//this.setState({
+				//	showstate:{
+				//		display:this.state.showstate.display=="block"//?"none":"block"
+				//	}
+				//})
+			},
+			render:function(){
+				return (
+					<div>
+						<input style={this.state.showstate} type="text" name="" ref="sss"/>
+						<div style={font} onClick={this.zzz} className="this">{this.state.sss}</div>
+					</div>
+				)
+			},
+			componentDidMount:function(){
+				setTimeout(function(){
+					this.setState({
+						sss:"fff"
+					})
+				}.bind(this),1000)
+			}
+		})
+
+		ReactDOM.render(
+			<div>
+				<Template/>
+			</div>
+			,
+			document.getElementById('example')
+		)
+	</script>
+</body>
+</html>

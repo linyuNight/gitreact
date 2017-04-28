@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html id="html">
+<head>
+	<meta charset=utf-8>
+	<meta name=description content="">
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	<title>Hello React!</title>
+	<script src="react.js"></script>
+	<script src="react.dom.js"></script>
+	<script src="https://cdn.bootcss.com/babel-standalone/6.22.1/babel.min.js"></script>
+	<style>
+		*{
+			padding:0;
+			margin:0;
+		}
+	</style>
+</head>
+<body>
+	<script type="text/javascript" src="rem.js"></script>
+	<div id="example"></div>
+	<script type="text/babel">
+		var hehe = {
+			fontSize:'.4rem',
+			color:'red'
+		};
+		var eee = {
+			fontSize:'.4rem'
+		};
+		var box = {
+			margin:'0 auto',
+			width:'6rem',
+			height:'1rem',
+			background:'#ccc'
+		};
+		var arr = [
+			<div style={hehe}>mydom</div>,
+			<div style={eee}>eee</div>
+		];
+
+		var Ttt = React.createClass({
+			render:function(){
+				return <h1 style={eee}>{this.props.name}</h1>
+			}
+		})
+		ReactDOM.render(
+			<div>
+				<div><Ttt name="zzz"/></div>
+				<div>{arr}</div>
+				<div>{arr}</div>
+				<div style={box}></div>
+				{/*注释...*/}
+			</div>
+			,
+			document.getElementById('example')
+		);
+	</script>
+</body>
+</html>
